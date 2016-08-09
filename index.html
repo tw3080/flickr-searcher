@@ -1,14 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="flickrSearchApp">
 
     <head>
         <meta charset="UTF-8" />
         <title>Flickr Searcher</title>
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet" />
+        <link href="css/style.css" rel="stylesheet" />
         <script src="node_modules/angular/angular.min.js"></script>
     </head>
 
-    <body>
+    <body ng-controller="MainCtrl as vm">
         <!-- Main Content -->
         <div class="main-container">
             <!-- Header -->
@@ -17,14 +18,14 @@
                 <h1>Flickr Searcher</h1>
             </header>
             <!-- Search form -->
-            <form name="flickrSearchForm">
+            <form name="flickrSearchForm" ng-submit="vm.submit()">
                 <!-- Search input field -->
-                <input type="text" placeholder="Enter a tag" />
+                <input type="text" ng-model="vm.searchTag" placeholder="Enter a tag" />
                 <!-- Submit button -->
                 <input type="submit" value="Submit" />
             </form>
             <p class="query-text">
-                Searching Flickr for photos tagged with _____
+                Searching Flickr for photos tagged with {{ vm.searchTag }}
             </p>
             <p class="query-results">
                 Found ___ results for _____

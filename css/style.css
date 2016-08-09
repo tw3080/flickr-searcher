@@ -1,7 +1,41 @@
+/* Main container */
 .main-container {
-  width: 60rem;
+  width: 52rem;
   margin: 5rem auto;
-  border: 1px solid #000;
   text-align: center;
   font-family: 'Roboto', sans-serif;
 }
+/* Main header text */
+.heading-text {
+  margin: 0 0 5rem 0;
+  text-transform: uppercase;
+  letter-spacing: 0.75rem;
+}
+/* Error messages */
+.error-text {
+  color: #F4B0B1;
+}
+/* Search result images */
+.result-thumbnails {
+  width: 12rem;
+  height: 12rem;
+  margin: 0.4rem 0.5rem;
+  display: inline-block;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  border: 0;
+}
+/*
+.search-results {
+    width: 15rem;
+    height: 15rem;
+    display: inline-block;
+    overflow: hidden;
+}
+
+.results-thumbnails {
+    height: auto;
+    width: 15rem;
+}
+*/

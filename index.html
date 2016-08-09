@@ -18,20 +18,17 @@
                 <h1>Flickr Searcher</h1>
             </header>
             <!-- Search form -->
-            <form name="flickrSearchForm" ng-submit="vm.submit()">
+            <form name="flickrSearchForm" novalidate ng-submit="vm.submit()">
                 <!-- Search input field -->
-                <input type="text" ng-model="vm.searchTag" placeholder="Enter a tag" />
+                <input type="text" ng-model="vm.searchTag" placeholder="Enter a tag" required />
                 <!-- Submit button -->
                 <input type="submit" value="Submit" />
             </form>
-            <p class="query-text">
-                Searching Flickr for photos tagged with {{ vm.searchTag }}
+            <p class="query-results" ng-show="vm.formIsValid">
+                Found {{ vm.numResults }} results for "{{ vm.searchTag }}"
             </p>
-            <p class="query-results">
-                Found ___ results for _____
-            </p>
-            <div class="search-results">
-                Images go here lol
+            <div class="search-results" ng-show="vm.formIsValid" ng-repeat="photo in vm.photos">
+                <img ng-src="https://farm{{ photo.farm }}.staticflickr.com/{{ photo.server }}/{{ photo.id }}_{{ photo.secret }}.jpg" />
             </div>
         </div>
         <script src="js/app.js"></script>

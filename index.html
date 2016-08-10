@@ -15,20 +15,31 @@
             <!-- Header -->
             <header>
                 <!-- Heading text -->
-                <h1>Flickr Searcher</h1>
+                <h1 class="heading-text">Flickr Searcher</h1>
             </header>
             <!-- Search form -->
             <form name="flickrSearchForm" novalidate ng-submit="vm.submit()">
                 <!-- Search input field -->
-                <input type="text" ng-model="vm.searchTag" placeholder="Enter a tag" required />
+                <input type="text" ng-model="vm.searchInput" placeholder="Enter a tag" required />
                 <!-- Submit button -->
                 <input type="submit" value="Submit" />
             </form>
-            <p class="query-results" ng-show="vm.formIsValid">
-                Found {{ vm.numResults }} results for "{{ vm.searchTag }}"
+            <!-- Invalid form error text -->
+            <p class="error-text" ng-show="vm.formInvalid">
+                Please enter a tag.
             </p>
-            <div class="search-results" ng-show="vm.formIsValid" ng-repeat="photo in vm.photos">
-                <img ng-src="https://farm{{ photo.farm }}.staticflickr.com/{{ photo.server }}/{{ photo.id }}_{{ photo.secret }}.jpg" />
+            <!-- Server error text -->
+            <p class="error-text" ng-show="vm.failure">
+                Unable to get images; please try again later.
+            </p>
+            <!-- Search results area -->
+            <div ng-show="vm.showResults">
+                <!-- Search result text -->
+                <p class="result-text" ng-show="vm.showResults">
+                    Found {{ vm.numResults }} results for "{{ vm.searchTag }}"
+                </p>
+                <!-- Search result images -->
+                <div class="result-thumbnails" ng-repeat="photo in vm.photos" ng-style="{'background-image':'url(https://farm{{ photo.farm }}.staticflickr.com/{{ photo.server }}/{{ photo.id }}_{{ photo.secret }}.jpg)'}"></div>
             </div>
         </div>
         <script src="js/app.js"></script>

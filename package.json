@@ -17,7 +17,8 @@
   },
   "homepage": "https://github.com/tw3080/flickr-searcher#readme",
   "dependencies": {
-    "angular": "^1.5.8"
+    "angular": "^1.5.8",
+    "angular-animate": "^1.5.8"
   },
   "devDependencies": {
     "gulp": "^3.9.1",

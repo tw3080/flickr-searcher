@@ -21,9 +21,9 @@
             <!-- Search form -->
             <form name="flickrSearchForm" novalidate ng-submit="vm.submit()">
                 <!-- Search input field -->
-                <input type="text" ng-model="vm.searchInput" placeholder="Enter a tag" required />
+                <input type="text" class="tag-input" ng-model="vm.searchInput" placeholder="Enter a tag" required />
                 <!-- Submit button -->
-                <input type="submit" value="Submit" />
+                <input type="submit" class="submit-btn" value="Submit" />
             </form>
             <!-- Invalid form error text -->
             <p class="error-text" ng-show="vm.formInvalid">

@@ -20,6 +20,24 @@
     color: @error-color;
 }
 
+/* Search result text and images */
+.result-area.ng-hide-add,
+.result-area.ng-hide-remove {
+    display: block !important;
+    opacity: 1;
+    -webkit-transtion: 0.5s ease;
+    transition: 0.5s ease;
+}
+
+.result-area.ng-hide {
+    opacity: 0;
+}
+
+/* Search result text */
+.result-text {
+    margin-bottom: 5rem;
+}
+
 /* Search result images */
 .result-thumbnails {
     width: 12rem;
@@ -31,17 +49,3 @@
     background-repeat: no-repeat;
     border: 0;
 }
-
-/*
-.search-results {
-    width: 15rem;
-    height: 15rem;
-    display: inline-block;
-    overflow: hidden;
-}
-
-.results-thumbnails {
-    height: auto;
-    width: 15rem;
-}
-*/

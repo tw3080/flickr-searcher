@@ -4,12 +4,42 @@
   margin: 5rem auto;
   text-align: center;
   font-family: 'Roboto', sans-serif;
+  color: #7f7f7f;
 }
 /* Main header text */
 .heading-text {
   margin: 0 0 5rem 0;
   text-transform: uppercase;
   letter-spacing: 0.75rem;
+  color: #00c3a6;
+}
+.tag-input,
+.submit-btn {
+  text-transform: lowercase;
+}
+.tag-input {
+  padding: 0.5rem;
+  border: 1px solid #00c3a6;
+  border-radius: 3px;
+}
+.tag-input:focus {
+  box-shadow: 0 0 5px #00c3a6;
+  outline: none;
+}
+.submit-btn {
+  padding: 0.5rem 1rem;
+  background-color: #00c3a6;
+  border: 1px solid #00c3a6;
+  border-radius: 3px;
+  color: #fff;
+}
+.submit-btn:hover {
+  background-color: #fff;
+  color: #00c3a6;
+}
+.submit-btn:focus {
+  box-shadow: 0 0 5px #00c3a6;
+  outline: none;
 }
 /* Error messages */
 .error-text {

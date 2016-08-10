@@ -1,4 +1,8 @@
 @error-color: #F4B0B1;
+@accent-color: #00c3a6;
+@results-text: #7f7f7f;
+@button-text: #fff;
+@border-radius: 3px;
 
 /* Main container */
 .main-container {
@@ -6,6 +10,7 @@
     margin: 5rem auto;
     text-align: center;
     font-family: 'Roboto', sans-serif;
+    color: @results-text;
 }
 
 /* Main header text */
@@ -13,6 +18,38 @@
     margin: 0 0 5rem 0;
     text-transform: uppercase;
     letter-spacing: 0.75rem;
+    color: @accent-color;
+}
+
+.tag-input,
+.submit-btn {
+    text-transform: lowercase;
+}
+
+.tag-input {
+    padding: 0.5rem;
+    border: 1px solid @accent-color;
+    border-radius: @border-radius;
+    &:focus {
+        box-shadow: 0 0 5px @accent-color;
+        outline: none;
+    }
+}
+
+.submit-btn {
+    padding: 0.5rem 1rem;
+    background-color: @accent-color;
+    border: 1px solid @accent-color;
+    border-radius: @border-radius;
+    color: @button-text;
+    &:hover {
+        background-color: @button-text;
+        color: @accent-color;
+    }
+    &:focus {
+        box-shadow: 0 0 5px @accent-color;
+        outline: none;
+    }
 }
 
 /* Error messages */

@@ -13,10 +13,12 @@
   letter-spacing: 0.75rem;
   color: #00c3a6;
 }
+/* Search input and submit button */
 .tag-input,
 .submit-btn {
   text-transform: lowercase;
 }
+/* Search input */
 .tag-input {
   padding: 0.5rem;
   border: 1px solid #00c3a6;
@@ -26,6 +28,7 @@
   box-shadow: 0 0 5px #00c3a6;
   outline: none;
 }
+/* Submit button */
 .submit-btn {
   padding: 0.5rem 1rem;
   background-color: #00c3a6;
@@ -48,10 +51,12 @@
 /* Search result text and images */
 .result-area.ng-hide-add,
 .result-area.ng-hide-remove {
-  display: block !important;
+  /* display: block !important; */
   opacity: 1;
-  -webkit-transtion: 0.5s ease;
-  transition: 0.5s ease;
+  -webkit-transtion: 0.2s ease;
+  -moz-transition: 0.2s ease;
+  -o-transition: 0.2s ease;
+  transition: 0.2s ease;
 }
 .result-area.ng-hide {
   opacity: 0;

@@ -1,4 +1,4 @@
-angular.module('flickrSearchApp', []).controller('MainCtrl', function($http, $scope) {
+angular.module('flickrSearchApp', ['ngAnimate']).controller('MainCtrl', function($http, $scope) {
     // TODO: How do I know which variables I should declare globally?
     // Initialize variables
     var vm = this;
